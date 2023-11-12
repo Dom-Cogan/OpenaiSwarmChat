@@ -1,0 +1,145 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Adjust the background color as needed */
+  }
+  
+  /* Flexbox Layout */
+  #container {
+    display: flex;
+    height: 100%;
+  }
+  
+  /* Task Section Styles */
+  .task-section {
+    flex-basis: 20%;
+    background-color: #2c3e50; /* Dark shade for the task section */
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .task-item {
+    background-color: #34495e; /* Slightly lighter shade for task items */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .task-button {
+    padding: 10px;
+    margin-top: auto; /* Push buttons to the bottom */
+    background-color: #2980b9; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  /* Chat Room Cards */
+  .chat-room-cards {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto; /* In case of scrolling */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Responsive grid layout */
+    grid-gap: 20px; /* Spacing between cards */
+  }
+  
+  .chat-room-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .chat-room-name, .chat-host, .chat-model, .chat-message {
+    margin-bottom: 10px;
+  }
+  
+  /* Host Chat Styles */
+  .host-chat {
+    flex-basis: 25%;
+    background-color: #ecf0f1; /* Light grey background */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .user-message {
+    background-color: #3498db; /* User message color */
+    color: white;
+    align-self: flex-end; /* Align to the right */
+  }
+  
+  .host-message {
+    background-color: #bdc3c7; /* Host message color */
+    align-self: flex-start; /* Align to the left */
+  }
+  
+  /* Input Box Styles */
+  .input-box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Center input box and button */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .input-box input {
+    flex: 1; /* Input takes up remaining space */
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .send-button {
+    padding: 10px 20px;
+    background-color: #3498db; /* Send button color */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Circular button */
+    cursor: pointer;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    #container {
+      flex-direction: column;
+    }
+  
+    .input-box {
+      width: calc(100% - 40px); /* Account for padding */
+    }
+  
+    .task-section, .host-chat {
+      flex-basis: auto;
+      width: 100%; /* Full width on smaller screens */
+    }
+  
+    .chat-room-cards {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+  
