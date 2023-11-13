@@ -1,0 +1,176 @@
+/* profiles.css */
+.profileContainer {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 20% 50% 30%;
+  background-color: black;
+  overflow: hidden;
+}
+
+.profileSideMenu {
+  grid-column: 1;
+  height: 98vh;
+  background-color: grey;
+  padding: 10px;
+}
+
+.profileBtns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.profileSpacer {
+  margin: 20px 0;
+}
+
+.profileChatInfo {
+  height: 75vh;
+  background-color: #444;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.profileChatName {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ddd;
+}
+
+.profileInfoBox {
+  margin-bottom: 15px;
+}
+
+.profileInfoBox h3 {
+  margin: 0;
+  font-weight: normal;
+  color: #aaa;
+}
+
+.profileMenuButton {
+  display: inline-block;
+  margin: var(--button-margin);
+  padding: var(--button-padding);
+  background-color: var(--button-bg-color);
+  border: none;
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+}
+
+.profileMenuButton:hover {
+  background-color: #777777;
+}
+
+.profileModelCards {
+  padding: 10px;
+}
+
+.profileModelinfo {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  display: grid;
+
+  grid-template-columns: 35% 65%;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.profileQuickInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profileModelLogo {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.profileModelName h3 {
+  margin: 0;
+}
+
+.profileModelTags {
+  display: inline-block;
+  background-color: rgba(0, 128, 0, 0.397);
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profileChatLogs {
+  margin-top: 20px;
+}
+
+.profileChatLog {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.profileChatLog.active {
+  background-color: #ddd;
+}
+
+.profileChatPreview {
+  padding: 20px;
+}
+
+.profileMessageHistory {
+  height: 85vh;
+  overflow-y: scroll;
+  padding: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+}
+
+.profileMessage {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.profileMessage.sent {
+  background-color: #def;
+}
+
+.profileMessageInfo {
+  display: inline-block;
+}
+
+.profileMessageBtns {
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.profileTerminateBtn,
+.profilePauseBtn,
+.profileResumeBtn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.profileTerminateBtn {
+  background-color: #d9534f;
+  color: white;
+}
+
+.profilePauseBtn {
+  background-color: #f0ad4e;
+  color: white;
+}
+
+.profileResumeBtn {
+  background-color: #5cb85c;
+  color: white;
+}

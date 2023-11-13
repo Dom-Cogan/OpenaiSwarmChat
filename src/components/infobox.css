@@ -1,0 +1,12 @@
+.infoBox {
+  margin-bottom: 15px;
+}
+
+.infoBox h3 {
+  margin: 0;
+  font-weight: normal;
+  color: #aaa;
+}
+.spacer {
+  margin: 20px 0;
+}

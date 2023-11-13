@@ -1,62 +1,48 @@
-import React from 'react';
-import './home.css';
-
-const TaskList = () => {
-  // Placeholder tasks
-  const tasks = ['Task Name 1', 'Task Name 2', 'Task Name 3'];
-  return (
-    <aside className="task-list">
-      {tasks.map((task, index) => (
-        <div key={index} className="task-item">{task}</div>
-      ))}
-      <button className="new-task-btn">Create New Task</button>
-      <button className="settings-btn">Settings</button>
-    </aside>
-  );
-};
-
-const ChatRoomCard = ({ roomName, hostName, modelName, lastMessage }) => {
-  return (
-    <div className="chat-room-card">
-      <div className="chat-room-name">{roomName}</div>
-      <div className="chat-room-host">{hostName}</div>
-      <div className="chat-room-model">{modelName}</div>
-      <div className="chat-room-last-message">{lastMessage}</div>
-    </div>
-  );
-};
-
-const ChatRoomList = () => {
-  // Placeholder chat rooms
-  const chatRooms = [
-    { roomName: 'Chat Room 1', hostName: 'Host GPT', modelName: 'Model One', lastMessage: 'Last Message' },
-    // ... other chat rooms
-  ];
-
-  return (
-    <section className="chat-room-list">
-      {chatRooms.map((chatRoom, index) => (
-        <ChatRoomCard key={index} {...chatRoom} />
-      ))}
-    </section>
-  );
-};
-
-const HostChat = () => {
-  return (
-    <aside className="host-chat">
-      <div className="host-chat-title">Host Chat</div>
-      {/* Messages and input box will go here */}
-    </aside>
-  );
-};
+import React from "react";
+import "../home/home.css";
+import sendIcon from "../../images/send.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="home-container">
-      <TaskList />
-      <ChatRoomList />
-      <HostChat />
+    <div className="homeContainer">
+      <div className="homeSideMenu">
+        {/* Assuming you will have a list of tasks here */}
+        <div className="homeTaskList">
+          <div className="homeTsk">Task Name</div>
+          {/* More tasks */}
+        </div>
+        <div className="homeButtons">
+          <Link to="/settings">
+            <button className="homeMenuButton">Settings</button>
+          </Link>
+          <Link to="/profiles">
+            <button className="homeMenuButton">Profiles</button>
+          </Link>
+          <button className="homeMenuButton">New Task</button>
+        </div>
+      </div>
+      <div className="homeCenter">
+        <div className="homeChatRoomCard">Chat Room Name</div>
+      </div>
+      <div className="homeChatWindow">
+        <div className="homeMessageHistory">
+          {/* The chat window could have messages and an input box */}
+          <div className="homeMmessage homeUserMessage">
+            This message was sent by the user
+          </div>
+          <div className="homeMessage">
+            This message was sent to the user by the Host GPT in the chat
+          </div>
+          {/* More messages */}
+        </div>
+        <div className="homeInputBox">
+          <input type="text" placeholder="Type a message..." />
+          <button className="homeSendBtn">
+            <img src={sendIcon} alt="Send" />
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

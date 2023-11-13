@@ -1,0 +1,77 @@
+:root {
+  --card-color: #cacaca;
+  --btn-radius: 5px;
+  --btn-margin: 10px;
+  --padding: 10px;
+  --settings-radius: 25px;
+
+  --black: #000000;
+}
+
+.settingsContainer {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 20% 80%;
+  background-color: var(--black);
+  overflow: hidden;
+}
+
+/* Styles for the side menu */
+.settingsSideMenu {
+  grid-column: 1;
+  height: 98vh;
+  background-color: grey;
+  padding: var(--padding);
+}
+.settingsContent {
+  grid-column: 2;
+  padding: 100px;
+  /* Add these lines */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.settingsSettings {
+  display: flex;
+  padding: var(--padding);
+  background-color: var(--card-color);
+  border-radius: var(--settings-radius);
+  margin: var(--btn-margin);
+  justify-content: center;
+}
+.settingsInputField {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: var(--padding);
+  font-weight: bold;
+  font-size: larger;
+}
+.settingsHeading {
+  display: flex;
+  justify-content: center;
+}
+
+.settingsSpacer {
+  height: 84vh;
+}
+
+/* Styles for the menu buttons */
+.settingsMenuButton {
+  display: inline-block;
+  margin: var(--button-margin);
+  padding: var(--button-padding);
+  background-color: var(--button-bg-color);
+  border: none;
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+}
+
+.settingsMenuButton:hover {
+  background-color: #777777;
+}
+
+.settingsBtns {
+  display: flex;
+  justify-content: space-between;
+}
